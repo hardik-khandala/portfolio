@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50o7e5RZJp5W41l3gjGzFCSJ7vZ6p7VrjC3JdA1CkXwyVf1l0Uodzj5skX6AT0ZC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    {% if title %}
+    <title>Hardik Khandala - {{title}}</title>
+    {% else %}
+    <title>Hardik Khandala</title>
+    {% endif %}
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+                <a class="navbar-brand mr-4" href="{% url 'home' %}">Hardik Khandala</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}"
+                            href="{% url 'home' %}">Home</a>
+                        <a class="nav-item nav-link {% if request.path == '/about/' %}active{% endif %}"
+                            href="{% url 'about' %}">About</a>
+                        <a class="nav-item nav-link {% if request.path == '/workspace/' %}active{% endif %}"
+                            href="{% url 'workspace' %}">Workspace</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <main role="main" class="container"> -->
+    <div class="column">
+        {% block content %}{% endblock %}
+    </div>
+    {% block footer %}
+    <footer>
+        <div style="background-color:rgb(37, 38, 43); margin-top:20px; padding-top:8px;">
+            <div class="container">
+                <div class="footer-up">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h3>Hardik Khandala</h3>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <a href="https://www.linkedin.com/in/hardik-khandala" target="_blank" class="social-link"><i
+                                    class="ci ci-linkedin ci-xl"></i></a>
+                            <a href="https://www.github.com/hardik-khandala" target="_blank" class="social-link"><i
+                                    class="ci ci-github ci-xl ci-invert"></i></a>
+                            <a href="https://www.twitter.com/hardik_khandala" target="_blank" class="social-link"><i
+                                    class="ci ci-x ci-xl ci-invert"></i></a>
+                            <a href="https://www.instagram.com/hardik.khandala22" target="_blank" class="social-link"><i
+                                    class="ci ci-instagram ci-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid white; margin: 0;">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center" style="padding-top: 5px;">
+                        <p>&#169; Created by <a href="https://www.github.com/hardik-khandala" target="_blank">Hardik
+                                Khandala</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    <!-- </main> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

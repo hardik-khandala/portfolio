@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <div class="project-card">
+                {% load static %}
+                <img src="{% static 'images/attendece_system.jpg' %}" alt="img" class="pro-img">
+                <div class="card-body">
+                    <h5 class="card-title">Attedence System</h5>
+                    <p class="card-text">It's used to take attedence of Students using face Recognizations.</p>
+                    <a href="https://github.com/hardik-khandala/Attendance-System" target="_blank" class="btn ">View
+                        Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                {% load static %}
+                <img src="{% static 'images/hand_recog.jpg' %}" alt="img" class="pro-img">
+                <div class="card-body">
+                    <h5 class="card-title">Hand Gesture Detection</h5>
+                    <p class="card-text">It's used to detect hand gesture movement.</p>
+                    <a href="https://github.com/hardik-khandala/Hand-Gesture-detection" target="_blank"
+                        class="btn ">View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    {% endblock %}
