@@ -26,11 +26,12 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="{% url 'home' %}">Hardik Khandala</a>
+                <a class="navbar-brand mr-4 cv2" href="{% url 'home' %}">Hardik Khandala</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
-                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="btn btn-outline-light ml-auto cv1" href="{% static 'cv/CV.pdf' %}" download>Download CV</a>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}"
@@ -39,6 +40,7 @@
                             href="{% url 'about' %}">About</a>
                         <a class="nav-item nav-link {% if request.path == '/workspace/' %}active{% endif %}"
                             href="{% url 'workspace' %}">Workspace</a>
+                        <a class="btn btn-outline-light ml-auto cv" href="{% static 'cv/CV.pdf' %}" download>Download CV</a>
                     </div>
                 </div>
             </div>

@@ -125,7 +125,7 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 30px 0px;
 }
 
 .skills div {
@@ -156,7 +156,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
 .project div {
@@ -169,7 +169,7 @@ ul {
 
 .experience-card {
     display: flex;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .experience-card img {
@@ -228,7 +228,10 @@ ul {
 .card-body p {
     margin: 0;
 }
+.cv1{
+    display: none;
 
+}
 
 @media (max-width: 768px) {
     .profile-card-container {
@@ -266,5 +269,16 @@ ul {
         width: 40px;
         height: 40px;
         padding: 5px;
+    }
+    .cv{
+        /* hide */
+        display: none;
+
+    }
+    .cv1{
+        display: block;
+    }
+    .cv2{
+        display: none;
     }
 }
