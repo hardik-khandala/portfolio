@@ -80,6 +80,10 @@ ul {
     margin-top: 25px;
 
 }
+.social a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
 
 .profile-content {
     margin-top: 20px;
@@ -152,20 +156,6 @@ ul {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
-.project {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 0px;
-}
-
-.project div {
-    margin: 10px;
-}
-
-.card-body {
-    padding: 3px;
-}
 
 .experience-card {
     display: flex;
@@ -199,6 +189,19 @@ ul {
 .exp-img {
     margin-right: 15px;
 }
+
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.project div {
+    margin: 10px;
+}
+
 
 .project .project-card {
     background-color: rgb(37, 38, 43);
