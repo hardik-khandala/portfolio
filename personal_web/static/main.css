@@ -113,6 +113,36 @@ ul {
 .home-page {
     margin: 30px;
 }
+.education-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+.edu-body{
+    background-color: rgb(37, 38, 43);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 10px 20px;
+    margin: 0 20px;
+
+}
+.education-details{
+    display: flex;
+    align-items: center;
+
+}
+.edu-img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+
+}
 
 /* Hover effect */
 .skills .text-center:hover {
@@ -168,7 +198,7 @@ ul {
     height: 92%;
     background-color: #aaa;
     left: 10px; /* Adjust this value to fit your design */
-    top: 5%;
+    top: 0%;
     z-index: 1; /* Ensure the line appears in front of the cards */
 }
 
@@ -179,20 +209,22 @@ ul {
     background-color: #aaa;
     border-radius: 50%;
     left: 0px; /* Adjust this value to fit your design */
-    top: 2%;
+    top: 0%;
     z-index: 2; /* Ensure the circle appears in front of the line */
 }
 
 .experience-card {
     display: flex;
-    margin: 15px 0; /* Reduce the space between the cards */
+    align-items: center;
+    margin-bottom: 20px;
+
     position: relative;
     z-index: 3; /* Ensure the cards appear in front of the line and circle */
 }
 .experience-card::before {
     content: "";
     position: absolute;
-    top: 10%; /* Position the arrow vertically at the middle of the card */
+    top: 8%; /* Position the arrow vertically at the middle of the card */
     left: 0; /* Position the arrow at the left edge of the card body */
     width: 0;
     height: 0;

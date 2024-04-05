@@ -1,9 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<!-- <div class="education">
-    <h2>Education</h2>
-    
-</div> -->
+<div class="container">
+    <div class="education">
+        <h2>Education</h2>
+        <!-- education card for engineering college-->
+        <div class="education-card">
+            <div class="edu-body">
+                <div class="education-details">
+                    {% load static %}
+                    <img src="{% static 'images/ldrp.png' %}" alt="" class="edu-img">
+                    <div>
+                        <h5 class="card-title">LDRP Institute of Technology & Research, Gandhinagar</h5>
+                        <h6 class="card-subtitle mb-2">Bachelor of Engineering, Information Technology</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Oct 2021 - Present</h6>
+                        <p>&bull; CPI: 7.74</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="tech-stack">
         <h2>Tech Stack</h2>
