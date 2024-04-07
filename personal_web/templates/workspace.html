@@ -42,68 +42,31 @@
         </div>
     </div>
 </div>
-
 <div class="container">
     <div class="projects">
         <h2>Projects</h2>
         <div class="project">
+            {% for project in projects %}
             <div class="project-card">
                 {% load static %}
-                <img src="{% static 'images/attendece_system.jpg' %}" alt="img" class="pro-img">
+                <img src="{{ project.image }}" alt="img" class="pro-img">
                 <div>
-                    <h5 class="card-title">Attedence System</h5>
-                    <p class="card-text">It's used to take attedence of Students using face Recognizations.</p>
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
                 </div>
                 <section>
                     <div class="tech-used" style="border-bottom:1px solid grey;">
-                        <span>DJANGO</span>
-                        <span>PYTHON</span>
-                        <span>POSTGRES</span>
+                        {% for tech in project.technologies %}
+                        <span>{{ tech }}</span>
+                        {% endfor %}
                     </div>
                     <div class="github-btn">
-                        <a href="https://github.com/hardik-khandala/Attendance-System" target="_blank"
-                            class="btn btn-secondary"><i class="ci ci-github ci-invert"></i>View Code</a>
+                        <a href="{{ project.github_link }}" target="_blank" class="btn btn-secondary"><i
+                                class="ci ci-github ci-invert"></i>View Code</a>
                     </div>
                 </section>
             </div>
-            <div class="project-card">
-                {% load static %}
-                <img src="{% static 'images/hand_recog.jpg' %}" alt="img" class="pro-img">
-                <div>
-                    <h5 class="card-title">Hand Gesture Detection</h5>
-                    <p class="card-text">It's used to detect hand gesture movement.</p>
-                </div>
-                <section>
-                    <div class="tech-used" style="border-bottom:1px solid grey;">
-                        <span>DJANGO</span>
-                        <span>PYTHON</span>
-                        <span>POSTGRES</span>
-                    </div>
-                    <div class="github-btn">
-                        <a href="https://github.com/hardik-khandala/Attendance-System" target="_blank"
-                            class="btn btn-secondary"><i class="ci ci-github ci-invert"></i>View Code</a>
-                    </div>
-                </section>
-            </div>
-            <div class="project-card">
-                {% load static %}
-                <img src="{% static 'images/portfolio.png' %}" alt="img" class="pro-img">
-                <div>
-                    <h5 class="card-title">Portfolio Django</h5>
-                    <p class="card-text">Simple my portfolio website for my skills and experience.</p>
-                </div>
-                <section>
-                    <div class="tech-used" style="border-bottom:1px solid grey;">
-                        <span>DJANGO</span>
-                        <span>PYTHON</span>
-                        <span>POSTGRES</span>
-                    </div>
-                    <div class="github-btn">
-                        <a href="https://github.com/hardik-khandala/Attendance-System" target="_blank"
-                            class="btn btn-secondary"><i class="ci ci-github ci-invert"></i>View Code</a>
-                    </div>
-                </section>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
