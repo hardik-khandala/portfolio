@@ -279,12 +279,12 @@ ul {
 }
 
 
-.project .project-card {
+.project-card {
     background-color: rgb(37, 38, 43);
     color: #fff;
     padding: 5px;
     border-radius: 5px;
-    width: 300px;
+    width: 320px;
     height: 350px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -302,11 +302,48 @@ ul {
     width: 100%;
     height: 130px;
     border-radius: 5px;
-
+    object-fit: cover;
 }
 .card-body p {
     margin: 0;
 }
+.github-btn{
+    display: flex;
+    justify-content:end;
+    margin-top: 20px;
+
+}
+.github-btn a{
+    background-color: #1A1B1E;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    gap: 5px;
+
+}
+.github-btn a:hover{
+    background-color: #C1C2C5;
+    color: #1A1B1E;
+}
+.tech-used{
+    padding-top: 7px;
+}
+.tech-used span{
+    border: 1px solid yellow;
+    padding: 5px;
+    border-radius: 25px;
+    color: yellow;
+    font-size: 10px;
+}
+
+
 .cv1{
     display: none;
 
