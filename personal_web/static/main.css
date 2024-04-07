@@ -113,6 +113,36 @@ ul {
 .home-page {
     margin: 30px;
 }
+
+.home-btn{
+    background-color: rgb(255, 212, 59);
+    color: #1A1B1E;
+}
+.home-btn:hover{
+    background-color:rgb(37, 38, 43);
+    color: white;
+    /* buttom big some */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+
+}
+
+.home-btn1{
+    border: 1px solid rgb(255, 212, 59);
+    color: rgb(255, 212, 59);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.home-btn1:hover{
+    /* buttom big some */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    background-color:rgb(37, 38, 43);
+    color: white;
+
+}
 .education-card {
     display: flex;
     align-items: center;
@@ -336,10 +366,10 @@ ul {
     padding-top: 7px;
 }
 .tech-used span{
-    border: 1px solid yellow;
+    border: 1px solid rgb(255, 212, 59);
     padding: 5px;
     border-radius: 25px;
-    color: yellow;
+    color: rgb(255, 212, 59);
     font-size: 10px;
 }
 
