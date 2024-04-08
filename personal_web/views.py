@@ -37,7 +37,7 @@ projects = [
         'description': "It's used to take attedence of Students using face Recognizations.",
         'image': '/static/images/attendece_system.jpg',
         'github_link': 'https://github.com/hardik-khandala/Attendance-System',
-        'technologies': ['DJANGO', 'PYTHON', 'POSTGRES']
+        'technologies': ['DJANGO', 'PYTHON', 'POSTGRES', 'HTML']
     },
     {
         'title': 'Hand Gesture Detection',
@@ -51,7 +51,7 @@ projects = [
         'description': "Simple my portfolio website for my skills and experience.",
         'image': '/static/images/portfolio.png',
         'github_link': 'https://github.com/hardik-khandala/portfolio',
-        'technologies': ['DJANGO', 'DOCKER', 'AWS']
+        'technologies': ['DJANGO', 'HTML', 'CSS', 'AWS']
     }
 ]
 
