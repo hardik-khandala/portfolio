@@ -6,39 +6,24 @@
         <h2>Experience</h2>
         <div class="vertical-timeline">
             <div class="timeline-line"></div>
-
-            <!-- <div class="experience-card">
-                <div class="timeline-circle"></div>
-                <div class="card-body" style="padding-bottom: 8px;">
-                    <div class="experience-details">
-                        {% load static %}
-                        <img src="{% static 'images/spark-foundation.png' %}" alt="" class="exp-img">
-                        <div>
-                            <h5 class="card-title">Web Development Intern, The Spark Foundation</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Dec 2022 - Jan 2023</h6>
-                        </div>
-                    </div>
-                    <p style="padding-left: 5px;">&bull; Created a donation portal for orphans and poor children using the Razor Pay API.</p>
-                    <p style="padding-left: 5px;">&bull; Created To Do List and Calculator using HTML, CSS and JavaScript.</p>
-                </div>
-            </div> -->
+            {% for experience in experiences %}
             <div class="experience-card">
                 <div class="timeline-circle"></div>
                 <div class="card-body" style="padding-bottom: 8px;">
                     <div class="experience-details">
                         {% load static %}
-                        <img src="{% static 'images/spark-foundation.png' %}" alt="" class="exp-img">
+                        <img src="{{ experience.image }}" alt="" class="exp-img">
                         <div>
-                            <h5 class="card-title">Web Development Intern, The Spark Foundation</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Dec 2022 - Jan 2023</h6>
+                            <h5 class="card-title">{{ experience.role }}, {{ experience.company }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ experience.duration }}</h6>
                         </div>
                     </div>
-                    <p style="padding-left: 5px;">&bull; Created a donation portal for orphans and poor children using
-                        the Razor Pay API.</p>
-                    <p style="padding-left: 5px;">&bull; Created To Do List and Calculator using HTML, CSS and
-                        JavaScript.</p>
+                    {% for responsibility in experience.responsibilities %}
+                    <p style="padding-left: 5px;">&bull; {{ responsibility }}</p>
+                    {% endfor %}
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
