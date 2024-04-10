@@ -18,6 +18,29 @@ skills = [
     {'name': 'Docker', 'icon_class': 'ci ci-docker ci-5x'}
 ]
 
+certificates = [
+    {
+        'title': 'Python for Data Science',
+        'image': '/static/images/nptel.png',
+        'organization': 'NPTEL',
+        'date': 'Issued: Oct 2023',
+    },
+    {
+        'title': 'Git for Beginners',
+        'image': '/static/images/udemy.png',
+        'organization': 'Udemy',
+        'date': 'Issued: Aug 2023',
+    },
+    {
+        'title': 'AWS Cloud Pratitioner Essentials',
+        'image': '/static/images/coursera.png',
+        'organization': 'Coursera',
+        'date': 'Issued: Jun 2023',
+    }
+    
+
+]
+
 experiences = [
     {
         'company': 'The Spark Foundation',
@@ -62,7 +85,8 @@ def home(request):
 
 def about(request):
     context = {
-        'skills': skills
+        'skills': skills,
+        'certificates': certificates
     }
     return render(request, 'about.html', {'title': 'About', **context})
 

@@ -3,7 +3,6 @@
 <div class="container">
     <div class="education">
         <h2>Education</h2>
-        <!-- education card for engineering college-->
         <div class="education-card">
             <div class="edu-body">
                 <div class="education-details">
@@ -31,6 +30,25 @@
             </div>
             {% endfor %}
         </div>
+    </div>
+</div>
+<div class="container">
+    <div class="certificates">
+        <h2>Certificates</h2>
+        <div class="certificate-body row justify-content-center">
+            {% for certificate in certificates %}
+            <div class="certificate-details">
+                {% load static %}
+                <img src="{{ certificate.image }}" alt="" class="certificate-img">
+                <div>
+                    <h5 class="card-title">{{ certificate.title }}</h5>
+                    <h6 class="card-subtitle mb-2">{{ certificate.organization }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ certificate.date }}</h6>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
     </div>
 </div>
 
