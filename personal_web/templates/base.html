@@ -10,9 +10,9 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dheereshagrwal/colored-icons@1.7.5/src/app/ci.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50o7e5RZJp5W41l3gjGzFCSJ7vZ6p7VrjC3JdA1CkXwyVf1l0Uodzj5skX6AT0ZC" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="{% static 'main.css' %}">
     {% if title %}
@@ -26,12 +26,7 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4 cv2" href="{% url 'home' %}">Hardik Khandala</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
-                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="btn btn-outline-light ml-auto cv1" href="{% static 'cv/CV.pdf' %}" download>Download CV</a>
+                <a class="navbar-brand mr-4" href="{% url 'home' %}">Hardik Khandala</a>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}"
@@ -40,7 +35,33 @@
                             href="{% url 'about' %}">About</a>
                         <a class="nav-item nav-link {% if request.path == '/workspace/' %}active{% endif %}"
                             href="{% url 'workspace' %}">Workspace</a>
-                        <a class="btn btn-outline-light ml-auto cv" href="{% static 'cv/CV.pdf' %}" download>Download CV</a>
+                        <a class="btn btn-outline-light ml-auto cv1 d-none d-md-inline-block"
+                            href="{% static 'cv/CV.pdf' %}" download>Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Navigation -->
+        <nav class="m-nav navbar-dark bg-steel fixed-bottom d-md-none">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="nav-item nav-link text-center" href="{% url 'home' %}">
+                            <span class="material-symbols-outlined">Home</span><br>
+                            Home
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-item nav-link text-center" href="{% url 'about' %}">
+                            <span class="material-symbols-outlined">accessibility_new</span><br>
+                            About
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a class="nav-item nav-link text-center" href="{% url 'workspace' %}">
+                            <span class="material-symbols-outlined">work</span><br>
+                            Workspace
+                        </a>
                     </div>
                 </div>
             </div>
@@ -50,39 +71,7 @@
     <div class="column">
         {% block content %}{% endblock %}
     </div>
-    {% block footer %}
-    <footer>
-        <div style="background-color:rgb(37, 38, 43); margin-top:20px; padding-top:8px;">
-            <div class="container">
-                <div class="footer-up">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <h3>Hardik Khandala</h3>
-                        </div>
-                        <div class="col-md-6 text-md-right">
-                            <a href="https://www.linkedin.com/in/hardik-khandala" target="_blank" class="social-link"><i
-                                    class="ci ci-linkedin ci-xl"></i></a>
-                            <a href="https://www.github.com/hardik-khandala" target="_blank" class="social-link"><i
-                                    class="ci ci-github ci-xl ci-invert"></i></a>
-                            <a href="https://www.twitter.com/hardik_khandala" target="_blank" class="social-link"><i
-                                    class="ci ci-x ci-xl ci-invert"></i></a>
-                            <a href="https://www.instagram.com/hardik.khandala22" target="_blank" class="social-link"><i
-                                    class="ci ci-instagram ci-xl"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <hr style="border-top: 1px solid white; margin: 0;">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 text-center" style="padding-top: 5px;">
-                        <p>&#169; Created by <a href="https://www.github.com/hardik-khandala" target="_blank">Hardik
-                                Khandala</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    {% endblock %}
+
     <!-- </main> -->
 
     <!-- Optional JavaScript -->
@@ -97,5 +86,37 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </body>
-
+{% block footer %}
+<footer>
+    <div style="background-color:rgb(37, 38, 43); margin-top:20px; padding-top:8px;">
+        <div class="container">
+            <div class="footer-up">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3>Hardik Khandala</h3>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <a href="https://www.linkedin.com/in/hardik-khandala" target="_blank" class="social-link"><i
+                                class="ci ci-linkedin ci-xl"></i></a>
+                        <a href="https://www.github.com/hardik-khandala" target="_blank" class="social-link"><i
+                                class="ci ci-github ci-xl ci-invert"></i></a>
+                        <a href="https://www.twitter.com/hardik_khandala" target="_blank" class="social-link"><i
+                                class="ci ci-x ci-xl ci-invert"></i></a>
+                        <a href="https://www.instagram.com/hardik.khandala22" target="_blank" class="social-link"><i
+                                class="ci ci-instagram ci-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-top: 1px solid white; margin: 0;">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center" style="padding-top: 5px;">
+                    <p>&#169; Created by <a href="https://www.github.com/hardik-khandala" target="_blank">Hardik
+                            Khandala</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
 </html>
