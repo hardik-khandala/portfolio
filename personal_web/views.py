@@ -24,18 +24,21 @@ certificates = [
         'image': '/static/images/nptel.png',
         'organization': 'NPTEL',
         'date': 'Issued: Oct 2023',
+        'link': 'https://nptel.ac.in/noc/E_Certificate/NPTEL23CS99S4446008910053853',
     },
     {
         'title': 'Git for Beginners',
         'image': '/static/images/udemy.png',
         'organization': 'Udemy',
         'date': 'Issued: Aug 2023',
+        'link': 'https://ude.my/UC-e77969e1-0c2a-4672-89bb-1ddb71dbeeba',
     },
     {
         'title': 'AWS Cloud Pratitioner Essentials',
         'image': '/static/images/coursera.png',
         'organization': 'Coursera',
         'date': 'Issued: Jun 2023',
+        'link': 'https://coursera.org/verify/EGKSUWE4CBZA',
     }
     
 

@@ -37,15 +37,17 @@
         <h2>Certificates</h2>
         <div class="certificate-body row justify-content-center">
             {% for certificate in certificates %}
-            <div class="certificate-details">
-                {% load static %}
-                <img src="{{ certificate.image }}" alt="" class="certificate-img">
-                <div>
-                    <h5 class="card-title">{{ certificate.title }}</h5>
-                    <h6 class="card-subtitle mb-2">{{ certificate.organization }}</h6>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ certificate.date }}</h6>
+            <a href="{{ certificate.link }}" target="_blank" class="cert-link">
+                <div class="certificate-details">
+                    {% load static %}
+                    <img src="{{ certificate.image }}" alt="" class="certificate-img">
+                    <div>
+                        <h5 class="card-title">{{ certificate.title }}</h5>
+                        <h6 class="card-subtitle mb-2">{{ certificate.organization }}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ certificate.date }}</h6>
+                    </div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
         

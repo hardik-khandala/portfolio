@@ -223,6 +223,9 @@ ul {
     flex-wrap: wrap;
 
 }
+.cert-link:hover {
+    text-decoration: none;
+}
 .certificate-details{
     display: flex;
     align-items: center;
