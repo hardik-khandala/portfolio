@@ -97,7 +97,7 @@ ul {
     /* Add padding for spacing */
     border-radius: 5px;
     /* Add border radius for rounded corners */
-    width: fit-content;
+    width: 75%;
     height: max-content;
     /* right the container */
     margin-left: auto;
@@ -477,8 +477,8 @@ ul {
     .profile-card-container {
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
     }
-
     .home-page {
         margin: 25px;
     }
@@ -515,9 +515,9 @@ ul {
     .skills div p {
         font-size: 10px;
     }
-    .certificate-body{
-        width: 100%;
-        height: auto;
+    .certificate-details{
+        width: 310px;
+        margin: 10px 0px;
     }
     .certificate-img{
         width: 50px;
