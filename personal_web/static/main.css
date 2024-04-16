@@ -431,8 +431,39 @@ ul {
     z-index: 1000;
 
 }
+.material-symbols-outlined{
+    font-size: 18px !important;
+}
+.m-nav{
+    background-color: rgb(37, 38, 43);
+    border-top: 1px solid grey;
+}
+.m-nav a:hover{
+    color: rgb(255, 212, 59);
+}
+.m-nav a{
+    font-size: 13px;
+    color: #C1C2C5;
+    text-decoration: none;
+}
 
 
+.cv-btn{
+    background-color: rgb(37, 38, 43);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    display: none;
+
+}
+.cv-btn:hover{
+    color: #fff;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
 @media (max-width: 768px) {
     body{
         margin-bottom: 5rem;
@@ -570,6 +601,9 @@ ul {
         width: 30px;
         height: 30px;
         padding: 5px;
+    }
+    .cv-btn{
+        display: block;
     }
 
 }

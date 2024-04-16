@@ -27,6 +27,8 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
                 <a class="navbar-brand mr-4" href="{% url 'home' %}">Hardik Khandala</a>
+
+                <a type="button" class="cv-btn" href="{% static 'cv/CV.pdf' %}" download>Download CV</a>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if request.path == '/' %}active{% endif %}"
