@@ -38,7 +38,7 @@
         <div class="certificate-body row justify-content-center">
             {% for certificate in certificates %}
             <a href="{{ certificate.link }}" target="_blank" class="cert-link">
-                <div class="certificate-details">
+                <div class="certificate-details" title="Click to Verify">
                     {% load static %}
                     <img src="{{ certificate.image }}" alt="" class="certificate-img">
                     <div>
