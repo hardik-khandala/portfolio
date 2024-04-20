@@ -437,7 +437,7 @@ ul {
 .m-nav{
     background-color: rgb(37, 38, 43);
     border-top: 1px solid grey;
-    height: 60px;
+    height: 65px;
 }
 .m-nav a:hover{
     color: rgb(255, 212, 59);
@@ -467,7 +467,7 @@ ul {
 }
 @media (max-width: 768px) {
     body{
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
     }
     .navbar-brand{
         display: inline !important;
